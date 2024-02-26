@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            max-width: 100%;
+            border-bottom: 2px solid orange;
+            padding: 8px;
+            background-color: seagreen;
+            color: white;
+        }
+        #time {
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        button {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: green;
+        }
+    </style>
+    <script>
+        function time_func(numb){
+            if (numb == 1){
+            document.getElementById('time').innerHTML = Date()
+            }
+            else {
+                document.getElementById('time').innerHTML = 'What is current time?'
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body> 
+   <h1 style="text-align: center;">Main Page</h1>
+   <h3 id="time">What is current time?</h3>
+   <button onclick="time_func(1)">Show time?</button>
+   <button onclick="time_func(0)">Change back?</button>
+
+</body>
+</html>
