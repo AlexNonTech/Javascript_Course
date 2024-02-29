@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .container {
+            width: 23%;
+            float: left;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .container button{
+            margin-top: 10px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(91, 142, 14);
+            display: inline-block;
+            border-radius: 10px;
+            border:none;
+        }
+        .container button:hover {
+            background-color: rgb(78, 119, 18);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="1.jpg" alt="Nature #1" width="275px"
+        height="200px" id="photo1">
+
+        <button onclick="change_background('1.jpg')">Change To #1</button>
+    </div>
+    <div class="container">
+        <img src="2.jpg" alt="Nature #2" width="275px"
+        height="200px" id="photo2">
+
+        <button onclick="change_background('2.jpg')">Change To #2</button>
+    </div>
+    <div class="container">
+        <img src="3.jpg" alt="Nature #3" width="275px"
+        height="200px" id="photo3">
+
+        <button onclick="change_background('3.jpg')">Change To #3</button>
+    </div>
+    <div class="container">
+        <img src="4.jpg" alt="Nature #4" width="275px"
+        height="200px" id="photo4">
+
+        <button onclick="change_background('4.jpg')">Change To #4</button>
+    </div>
+
+    <script>
+        function change_background(imagePath) {
+            document.body.style.backgroundImage = `url('${imagePath}')`;
+        }
+    </script>
+</body>
+</html>
