@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 10px;
+            color: black;
+            background-color: wheat;
+            border: none;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            color: rgb(241, 235, 235);
+            background-color: green;
+            border: none;
+        }
+        button:hover {
+            background-color: rgb(7, 92, 7);
+            cursor: pointer;
+        }
+    </style>
+    <title>Ask Gender</title>
+</head>
+<body>
+    <input type="text" id='gender' placeholder="Your gender is?"><br>
+    <button onclick="gender_check()">Process</button>
+
+    <script>
+        function gender_check(){
+            gender = document.getElementById('gender');
+            if (gender.value == 'male') {
+                alert("Your are male!");
+            } 
+            else if (gender.value == 'female') {
+                alert("You are female!");
+            }
+            else {
+                alert("unknown gender :()")
+            }
+        }
+    </script>
+</body>
+</html>
